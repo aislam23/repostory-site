@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Repostory — Политика конфиденциальности</title>
+<meta name="description" content="Политика конфиденциальности Repostory: какие данные из Instagram, Telegram и VK мы используем, зачем, где храним и как их удалить.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<div class="lang-switch-bar">
+  <button type="button" class="lang-btn" data-set-lang="ru" aria-pressed="true">RU</button>
+  <button type="button" class="lang-btn" data-set-lang="en" aria-pressed="false">EN</button>
+</div>
+
+<!-- ===================== РУССКИЙ ===================== -->
+<div data-lang="ru">
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">
+        <img class="brand-mark" src="/favicon.svg" alt="" width="34" height="34">
+        Repostory
+      </a>
+      <nav>
+        <ul class="site-nav">
+          <li><a href="/">Главная</a></li>
+          <li><a href="/privacy.html" class="current">Политика конфиденциальности</a></li>
+          <li><a href="/terms.html">Условия использования</a></li>
+          <li><a href="/data-deletion.html">Удаление данных</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="doc">
+      <div class="container">
+        <h1>Политика конфиденциальности</h1>
+        <p class="meta-line">Дата вступления в силу: 18 сентября 2026 г.</p>
+
+        <h2>1. Оператор и контакты</h2>
+        <p>
+          Оператором данных является ИП Исламов Артём (далее — «мы», «оператор»), владелец сервиса
+          Repostory: Telegram-бот <a href="https://t.me/repostorybot">@repostorybot</a> и сайт
+          <a href="https://repostory.me">repostory.me</a>. По всем вопросам о персональных данных
+          пишите на <a href="mailto:islamov.tema@gmail.com">islamov.tema@gmail.com</a>.
+        </p>
+
+        <h2>2. Какие данные мы собираем</h2>
+        <p>Мы собираем данные из четырёх источников — только те, что нужны для работы сервиса.</p>
+
+        <h3>Instagram (официальный вход — Instagram API with Instagram Login)</h3>
+        <ul>
+          <li>Id и username вашего профессионального Instagram-аккаунта (Business или Creator);</li>
+          <li>тип аккаунта;</li>
+          <li>долгоживущий токен доступа (действует 60 дней, мы продлеваем его автоматически);</li>
+          <li>
+            медиафайлы активных историй (фото/видео) и их метаданные: id истории, тип медиа, время
+            публикации.
+          </li>
+        </ul>
+        <p>
+          Мы получаем эти данные через официальное разрешение
+          <code>instagram_business_basic</code> и метод <code>GET /me/stories</code> — то есть только
+          ваши собственные активные истории, которые вы сами публикуете в Instagram.
+        </p>
+
+        <h3>Telegram</h3>
+        <ul>
+          <li>Id и username вашего аккаунта в Telegram, имя;</li>
+          <li>id подключения Telegram Business (business connection id) — нужен, чтобы публиковать истории от вашего имени методом Telegram Business.</li>
+        </ul>
+
+        <h3>VK (только если вы включили публикацию в VK)</h3>
+        <ul>
+          <li>Id пользователя VK;</li>
+          <li>токен доступа VK, который вы сами выпускаете и передаёте боту.</li>
+        </ul>
+
+        <h3>HikerAPI (запасной источник — только для аккаунтов без Instagram Login)</h3>
+        <p>
+          Если вы подключаете Instagram-аккаунт по публичному username, а не через официальный вход
+          Instagram, истории для этого аккаунта запрашивает сторонний провайдер HikerAPI —
+          он работает только с открытыми (публичными) аккаунтами и не выдаёт данные закрытых профилей.
+          Мы честно указываем этот путь как альтернативу: он используется только когда вы сами выбрали
+          подключение по username, а не через Instagram Login.
+        </p>
+
+        <h2>3. Зачем нам эти данные</h2>
+        <p>
+          Единственная цель — перенести истории, которые вы сами публикуете в Instagram, в ваш
+          Telegram-профиль и (по вашему выбору) на вашу страницу VK. Мы не используем данные
+          Instagram для рекламы, аналитики поведения, продажи третьим лицам или любых целей, кроме
+          выполнения того, о чём вы попросили бота.
+        </p>
+
+        <h2>4. Правовое основание обработки</h2>
+        <p>
+          Мы обрабатываем данные на основании вашего явного согласия: вы сами инициируете подключение
+          Instagram, Telegram и VK в боте и можете отозвать согласие в любой момент (см. раздел 8).
+        </p>
+
+        <h2>5. Где и как мы храним данные</h2>
+        <p>
+          Данные хранятся на сервере, арендованном оператором у стороннего хостинг-провайдера.
+          Доступ к серверу и базе данных защищён паролями и ключами, доступными только оператору.
+          Токены доступа никогда не записываются в открытом виде в логи.
+        </p>
+
+        <h2>6. Сроки хранения</h2>
+        <table>
+          <thead>
+            <tr><th>Данные</th><th>Срок хранения</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Медиафайл истории (фото/видео)</td>
+              <td>Удаляется с сервера сразу после публикации в Telegram/VK или сразу после того, как вы пропустили историю.</td>
+            </tr>
+            <tr>
+              <td>Id и метаданные истории (без медиа)</td>
+              <td>Хранятся, пока аккаунт подключён — чтобы не публиковать одну и ту же историю дважды.</td>
+            </tr>
+            <tr>
+              <td>Токен доступа и данные аккаунта Instagram/VK</td>
+              <td>Хранятся, пока аккаунт подключён к боту.</td>
+            </tr>
+            <tr>
+              <td>Всё вышеперечисленное — после отключения</td>
+              <td>Удаляется не позднее чем через 30 дней с момента отключения аккаунта или запроса на удаление (на практике — немедленно).</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>7. Кому мы передаём данные</h2>
+        <p>Мы не продаём данные и не передаём их для рекламы. Данные передаются только следующим сторонам и только для работы сервиса:</p>
+        <ul>
+          <li><strong>Telegram</strong> — чтобы опубликовать историю в вашем профиле методом Telegram Business;</li>
+          <li><strong>VK</strong> — только если вы сами включили публикацию в VK, и только ваш собственный токен и id;</li>
+          <li><strong>Хостинг-провайдер</strong> — как оператор сервера, на котором физически хранятся данные;</li>
+          <li><strong>HikerAPI</strong> — только для аккаунтов, подключённых по публичному username (см. раздел 2), и только username, необходимый для запроса историй.</li>
+        </ul>
+        <p>
+          Мы соблюдаем Meta Platform Terms и Developer Policies и используем данные Instagram
+          исключительно для предоставления функциональности, которую вы сами запросили у бота.
+        </p>
+
+        <h2>8. Ваши права</h2>
+        <p>Вы вправе в любой момент:</p>
+        <ul>
+          <li>узнать, какие данные о вас хранятся, — напишите на <a href="mailto:islamov.tema@gmail.com">islamov.tema@gmail.com</a>;</li>
+          <li>отозвать согласие и отключить Instagram, Telegram или VK;</li>
+          <li>потребовать полное удаление своих данных.</li>
+        </ul>
+
+        <h2>9. Как удалить данные</h2>
+        <p>Есть три способа — подробно они описаны на странице <a href="/data-deletion.html">«Удаление данных»</a>:</p>
+        <ol>
+          <li>кнопка «Отключить Instagram» (или команда <code>/delete_instagram</code>) прямо в боте;</li>
+          <li>Instagram → Настройки → «Apps and websites» → удалить приложение «Repostory» — Instagram сам уведомит нас, и данные удалятся автоматически;</li>
+          <li>письмо на <a href="mailto:islamov.tema@gmail.com">islamov.tema@gmail.com</a>.</li>
+        </ol>
+
+        <h2>10. Дети</h2>
+        <p>
+          Сервис не предназначен для лиц младше 16 лет (или минимального возраста согласия в вашей
+          стране, если он выше). Мы сознательно не собираем данные таких пользователей.
+        </p>
+
+        <h2>11. Изменения политики</h2>
+        <p>
+          Мы можем обновлять эту политику. Дата вступления в силу указана в начале страницы; о
+          существенных изменениях мы сообщим в боте.
+        </p>
+
+        <div class="callout">
+          <strong>Кратко:</strong> мы читаем только ваши собственные истории Instagram, чтобы
+          опубликовать их там, где вы попросили, и удаляем медиафайлы сразу после публикации.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <ul class="footer-links">
+        <li><a href="/">Главная</a></li>
+        <li><a href="/privacy.html">Политика конфиденциальности</a></li>
+        <li><a href="/terms.html">Условия использования</a></li>
+        <li><a href="/data-deletion.html">Удаление данных</a></li>
+        <li><a href="mailto:islamov.tema@gmail.com">islamov.tema@gmail.com</a></li>
+      </ul>
+      <p class="footer-meta">ИП Исламов Артём · Repostory · <a href="https://t.me/repostorybot">@repostorybot</a></p>
+    </div>
+  </footer>
+</div>
+
+<!-- ===================== ENGLISH ===================== -->
+<div data-lang="en" hidden>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">
+        <img class="brand-mark" src="/favicon.svg" alt="" width="34" height="34">
+        Repostory
+      </a>
+      <nav>
+        <ul class="site-nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/privacy.html" class="current">Privacy Policy</a></li>
+          <li><a href="/terms.html">Terms of Service</a></li>
+          <li><a href="/data-deletion.html">Data Deletion</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="doc">
+      <div class="container">
+        <h1>Privacy Policy</h1>
+        <p class="meta-line">Effective date: September 18, 2026.</p>
+
+        <h2>1. Operator and contact</h2>
+        <p>
+          The data operator is Artem Islamov, sole proprietor ("we", "the operator"), the owner of
+          Repostory: the Telegram bot <a href="https://t.me/repostorybot">@repostorybot</a> and the
+          website <a href="https://repostory.me">repostory.me</a>. For any question about your
+          personal data, write to <a href="mailto:islamov.tema@gmail.com">islamov.tema@gmail.com</a>.
+        </p>
+
+        <h2>2. What data we collect</h2>
+        <p>We collect data from four sources — only what the service needs to function.</p>
+
+        <h3>Instagram (official login — Instagram API with Instagram Login)</h3>
+        <ul>
+          <li>Your professional Instagram account's id and username (Business or Creator);</li>
+          <li>account type;</li>
+          <li>a long-lived access token (valid 60 days; we refresh it automatically);</li>
+          <li>
+            active Story media files (photo/video) and their metadata: Story id, media type,
+            timestamp.
+          </li>
+        </ul>
+        <p>
+          We obtain this data through the official <code>instagram_business_basic</code> permission
+          and the <code>GET /me/stories</code> endpoint — meaning only your own active Stories, the
+          ones you publish yourself on Instagram.
+        </p>
+
+        <h3>Telegram</h3>
+        <ul>
+          <li>Your Telegram account id and username, first name;</li>
+          <li>your Telegram Business connection id — needed to publish Stories on your behalf via the Telegram Business API.</li>
+        </ul>
+
+        <h3>VK (only if you enable publishing to VK)</h3>
+        <ul>
+          <li>Your VK user id;</li>
+          <li>a VK access token that you generate and provide to the bot yourself.</li>
+        </ul>
+
+        <h3>HikerAPI (fallback source — accounts without Instagram Login only)</h3>
+        <p>
+          If you connect an Instagram account by its public username instead of through the official
+          Instagram Login, Stories for that account are fetched by a third-party provider, HikerAPI —
+          it only works with public accounts and cannot access private profiles. We disclose this path
+          honestly as an alternative: it is used only when you yourself chose username-based
+          connection instead of Instagram Login.
+        </p>
+
+        <h2>3. Why we use this data</h2>
+        <p>
+          The sole purpose is to mirror the Stories you publish on Instagram to your Telegram profile
+          and, if you choose, to your VK page. We do not use Instagram data for advertising, behavioral
+          analytics, sale to third parties, or any purpose other than doing what you asked the bot to
+          do.
+        </p>
+
+        <h2>4. Legal basis</h2>
+        <p>
+          We process data based on your explicit consent: you initiate the connection of Instagram,
+          Telegram and VK in the bot yourself, and you can withdraw consent at any time (see section
+          8).
+        </p>
+
+        <h2>5. Where and how we store data</h2>
+        <p>
+          Data is stored on a server rented by the operator from a third-party hosting provider.
+          Access to the server and database is protected by passwords and keys available only to the
+          operator. Access tokens are never written to logs in plain text.
+        </p>
+
+        <h2>6. Retention periods</h2>
+        <table>
+          <thead>
+            <tr><th>Data</th><th>Retention</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Story media file (photo/video)</td>
+              <td>Deleted from the server immediately after publishing to Telegram/VK, or immediately after you skip that Story.</td>
+            </tr>
+            <tr>
+              <td>Story id and metadata (no media)</td>
+              <td>Kept while the account is connected — to avoid publishing the same Story twice.</td>
+            </tr>
+            <tr>
+              <td>Access token and Instagram/VK account data</td>
+              <td>Kept while the account is connected to the bot.</td>
+            </tr>
+            <tr>
+              <td>All of the above — after disconnecting</td>
+              <td>Deleted within 30 days of disconnecting the account or requesting deletion (in practice, immediately).</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>7. Who we share data with</h2>
+        <p>We do not sell data and do not share it for advertising. Data is shared only with the following parties, only to run the service:</p>
+        <ul>
+          <li><strong>Telegram</strong> — to publish the Story to your profile via the Telegram Business API;</li>
+          <li><strong>VK</strong> — only if you enabled publishing to VK yourself, and only your own token and id;</li>
+          <li><strong>Our hosting provider</strong> — as the operator of the server where data is physically stored;</li>
+          <li><strong>HikerAPI</strong> — only for accounts connected by public username (see section 2), and only the username needed to request Stories.</li>
+        </ul>
+        <p>
+          We comply with Meta's Platform Terms and Developer Policies and use Instagram data solely to
+          provide the functionality you requested from the bot.
+        </p>
+
+        <h2>8. Your rights</h2>
+        <p>At any time, you may:</p>
+        <ul>
+          <li>ask what data we hold about you — write to <a href="mailto:islamov.tema@gmail.com">islamov.tema@gmail.com</a>;</li>
+          <li>withdraw consent and disconnect Instagram, Telegram, or VK;</li>
+          <li>request full deletion of your data.</li>
+        </ul>
+
+        <h2>9. How to delete your data</h2>
+        <p>There are three ways — described in detail on the <a href="/data-deletion.html">Data Deletion</a> page:</p>
+        <ol>
+          <li>the "Disconnect Instagram" button (or the <code>/delete_instagram</code> command) inside the bot;</li>
+          <li>Instagram → Settings → "Apps and websites" → remove the "Repostory" app — Instagram notifies us automatically and your data is deleted;</li>
+          <li>an email to <a href="mailto:islamov.tema@gmail.com">islamov.tema@gmail.com</a>.</li>
+        </ol>
+
+        <h2>10. Children</h2>
+        <p>
+          The service is not intended for anyone under 16 (or the minimum age of consent in your
+          country, if higher). We do not knowingly collect data from such users.
+        </p>
+
+        <h2>11. Changes to this policy</h2>
+        <p>
+          We may update this policy. The effective date is shown at the top of this page; we will
+          announce material changes inside the bot.
+        </p>
+
+        <div class="callout">
+          <strong>In short:</strong> we only read your own Instagram Stories in order to publish them
+          where you asked, and we delete media files immediately after publishing.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <ul class="footer-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/privacy.html">Privacy Policy</a></li>
+        <li><a href="/terms.html">Terms of Service</a></li>
+        <li><a href="/data-deletion.html">Data Deletion</a></li>
+        <li><a href="mailto:islamov.tema@gmail.com">islamov.tema@gmail.com</a></li>
+      </ul>
+      <p class="footer-meta">Artem Islamov, sole proprietor · Repostory · <a href="https://t.me/repostorybot">@repostorybot</a></p>
+    </div>
+  </footer>
+</div>
+
+<script src="/assets/lang.js"></script>
+</body>
+</html>

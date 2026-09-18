@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Repostory — Удаление данных</title>
+<meta name="description" content="Как удалить свои данные из Repostory: три способа отключить Instagram и удалить данные, что именно удаляется и в какие сроки.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<div class="lang-switch-bar">
+  <button type="button" class="lang-btn" data-set-lang="ru" aria-pressed="true">RU</button>
+  <button type="button" class="lang-btn" data-set-lang="en" aria-pressed="false">EN</button>
+</div>
+
+<!-- ===================== РУССКИЙ ===================== -->
+<div data-lang="ru">
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">
+        <img class="brand-mark" src="/favicon.svg" alt="" width="34" height="34">
+        Repostory
+      </a>
+      <nav>
+        <ul class="site-nav">
+          <li><a href="/">Главная</a></li>
+          <li><a href="/privacy.html">Политика конфиденциальности</a></li>
+          <li><a href="/terms.html">Условия использования</a></li>
+          <li><a href="/data-deletion.html" class="current">Удаление данных</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="doc">
+      <div class="container">
+        <h1>Удаление данных</h1>
+        <p class="meta-line">Дата вступления в силу: 18 сентября 2026 г.</p>
+        <p>
+          Вы можете удалить свои данные из Repostory тремя способами. Все три приводят к одному
+          результату — описанному ниже разделе «Что именно удаляется».
+        </p>
+
+        <h2>Способ 1. Кнопка в боте</h2>
+        <p>
+          Откройте чат с <a href="https://t.me/repostorybot">@repostorybot</a>, зайдите в раздел
+          настроек Instagram и нажмите «Отключить Instagram» (либо отправьте команду
+          <code>/delete_instagram</code>). Бот сразу же остановит опрос историй, удалит токен доступа
+          и данные аккаунта.
+        </p>
+
+        <h2>Способ 2. Через настройки Instagram</h2>
+        <p>
+          Если вы подключали Instagram через официальный вход (Instagram Login), вы можете отозвать
+          доступ прямо в Instagram, и Repostory узнает об этом автоматически:
+        </p>
+        <ol>
+          <li>Откройте приложение Instagram → «Настройки и конфиденциальность»;</li>
+          <li>«Приложения и сайты» (Apps and websites) / «Разрешения веб-сайта»;</li>
+          <li>найдите «Repostory» в списке и нажмите «Удалить» (Remove);</li>
+          <li>
+            Instagram уведомит нашу систему автоматическим запросом, и мы удалим ваши данные без
+            дополнительных действий с вашей стороны. Статус запроса на удаление доступен по адресу
+            вида <code>https://api.repostory.me/meta/data-deletion/&lt;код&gt;</code>, который
+            Instagram может показать вам после удаления.
+          </li>
+        </ol>
+
+        <h2>Способ 3. По электронной почте</h2>
+        <p>
+          Напишите на <a href="mailto:islamov.tema@gmail.com">islamov.tema@gmail.com</a> с адреса,
+          связанного с вашим аккаунтом, и укажите ваш Telegram username или Instagram username. Мы
+          удалим данные и подтвердим это письмом.
+        </p>
+
+        <h2>Что именно удаляется</h2>
+        <ul>
+          <li>Токен доступа к Instagram и VK;</li>
+          <li>id, username и другие данные подключённого Instagram-аккаунта;</li>
+          <li>сохранённые id и метаданные историй (для защиты от повторной публикации);</li>
+          <li>медиафайлы историй — они и так удаляются сразу после публикации или пропуска, отдельно ничего не остаётся.</li>
+        </ul>
+        <p>
+          Данные Telegram (id, username, имя) и статистика использования бота сохраняются, пока вы не
+          заблокируете бота или не попросите удалить их отдельно — они не связаны с разрешением
+          Instagram и нужны для базовой работы Telegram-бота (например, чтобы отвечать на команды).
+        </p>
+
+        <h2>Сроки</h2>
+        <p>
+          Удаление выполняется в течение 30 дней с момента запроса. На практике оно происходит
+          немедленно — как только бот получает команду на отключение, запрос от Instagram
+          (deauthorize/data deletion callback) или письмо на почту.
+        </p>
+
+        <div class="callout">
+          <strong>Не уверены, как удалить данные?</strong> Проще всего — открыть
+          <a href="https://t.me/repostorybot">@repostorybot</a> и нажать «Отключить Instagram».
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <ul class="footer-links">
+        <li><a href="/">Главная</a></li>
+        <li><a href="/privacy.html">Политика конфиденциальности</a></li>
+        <li><a href="/terms.html">Условия использования</a></li>
+        <li><a href="/data-deletion.html">Удаление данных</a></li>
+        <li><a href="mailto:islamov.tema@gmail.com">islamov.tema@gmail.com</a></li>
+      </ul>
+      <p class="footer-meta">ИП Исламов Артём · Repostory · <a href="https://t.me/repostorybot">@repostorybot</a></p>
+    </div>
+  </footer>
+</div>
+
+<!-- ===================== ENGLISH ===================== -->
+<div data-lang="en" hidden>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">
+        <img class="brand-mark" src="/favicon.svg" alt="" width="34" height="34">
+        Repostory
+      </a>
+      <nav>
+        <ul class="site-nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/privacy.html">Privacy Policy</a></li>
+          <li><a href="/terms.html">Terms of Service</a></li>
+          <li><a href="/data-deletion.html" class="current">Data Deletion</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="doc">
+      <div class="container">
+        <h1>Data Deletion</h1>
+        <p class="meta-line">Effective date: September 18, 2026.</p>
+        <p>
+          You can delete your data from Repostory in three ways. All three lead to the same outcome,
+          described below under "What exactly gets deleted".
+        </p>
+
+        <h2>Method 1. A button in the bot</h2>
+        <p>
+          Open a chat with <a href="https://t.me/repostorybot">@repostorybot</a>, go to the Instagram
+          settings section, and tap "Disconnect Instagram" (or send the
+          <code>/delete_instagram</code> command). The bot immediately stops polling for Stories and
+          deletes the access token and account data.
+        </p>
+
+        <h2>Method 2. Through Instagram's own settings</h2>
+        <p>
+          If you connected Instagram through the official Instagram Login, you can revoke access
+          directly in Instagram, and Repostory learns about it automatically:
+        </p>
+        <ol>
+          <li>Open the Instagram app → "Settings and privacy";</li>
+          <li>"Apps and websites" / "Website permissions";</li>
+          <li>find "Repostory" in the list and tap "Remove";</li>
+          <li>
+            Instagram notifies our system with an automatic request, and we delete your data without
+            any further action on your part. The status of the deletion request is available at an
+            address like <code>https://api.repostory.me/meta/data-deletion/&lt;code&gt;</code>, which
+            Instagram may show you after removal.
+          </li>
+        </ol>
+
+        <h2>Method 3. By email</h2>
+        <p>
+          Email <a href="mailto:islamov.tema@gmail.com">islamov.tema@gmail.com</a> from the address
+          associated with your account, and mention your Telegram username or Instagram username. We
+          will delete your data and confirm it by email.
+        </p>
+
+        <h2>What exactly gets deleted</h2>
+        <ul>
+          <li>Your Instagram and VK access tokens;</li>
+          <li>the id, username, and other data of the connected Instagram account;</li>
+          <li>stored Story ids and metadata (kept only to prevent duplicate publishing);</li>
+          <li>Story media files — these are already deleted right after publishing or skipping, so nothing separate remains.</li>
+        </ul>
+        <p>
+          Telegram data (id, username, first name) and bot usage statistics are kept until you block
+          the bot or ask us to delete them separately — they are not tied to the Instagram permission
+          and are needed for the Telegram bot's basic operation (for example, to respond to commands).
+        </p>
+
+        <h2>Timeline</h2>
+        <p>
+          Deletion is completed within 30 days of the request. In practice it happens immediately —
+          as soon as the bot receives the disconnect command, a request from Instagram
+          (deauthorize / data deletion callback), or an email.
+        </p>
+
+        <div class="callout">
+          <strong>Not sure how to delete your data?</strong> The simplest way is to open
+          <a href="https://t.me/repostorybot">@repostorybot</a> and tap "Disconnect Instagram".
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <ul class="footer-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/privacy.html">Privacy Policy</a></li>
+        <li><a href="/terms.html">Terms of Service</a></li>
+        <li><a href="/data-deletion.html">Data Deletion</a></li>
+        <li><a href="mailto:islamov.tema@gmail.com">islamov.tema@gmail.com</a></li>
+      </ul>
+      <p class="footer-meta">Artem Islamov, sole proprietor · Repostory · <a href="https://t.me/repostorybot">@repostorybot</a></p>
+    </div>
+  </footer>
+</div>
+
+<script src="/assets/lang.js"></script>
+</body>
+</html>

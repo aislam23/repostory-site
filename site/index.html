@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Repostory — истории Instagram в Telegram и VK</title>
+<meta name="description" content="Repostory — Telegram-бот, который с вашего согласия переносит ваши истории из Instagram в Telegram-профиль и, по желанию, в VK.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<div class="lang-switch-bar">
+  <button type="button" class="lang-btn" data-set-lang="ru" aria-pressed="true">RU</button>
+  <button type="button" class="lang-btn" data-set-lang="en" aria-pressed="false">EN</button>
+</div>
+
+<!-- ===================== РУССКИЙ ===================== -->
+<div data-lang="ru">
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">
+        <img class="brand-mark" src="/favicon.svg" alt="" width="34" height="34">
+        Repostory
+      </a>
+      <nav>
+        <ul class="site-nav">
+          <li><a href="/" class="current">Главная</a></li>
+          <li><a href="/privacy.html">Политика конфиденциальности</a></li>
+          <li><a href="/terms.html">Условия использования</a></li>
+          <li><a href="/data-deletion.html">Удаление данных</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Ваши Instagram-истории сами появляются в Telegram и VK</h1>
+        <p class="lead">
+          Repostory — Telegram-бот, который с вашего согласия следит за историями (Stories) вашего
+          профессионального Instagram-аккаунта и переносит их в ваш Telegram-профиль, а по желанию —
+          и на вашу страницу VK. Публикуете в Instagram как обычно — остальное делает бот.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://t.me/repostorybot">Открыть бота</a>
+          <a class="btn btn-secondary" href="/privacy.html">Политика конфиденциальности</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-muted">
+      <div class="container">
+        <h2>Как это работает</h2>
+        <ol class="steps">
+          <li class="step">
+            <span class="step-number">1</span>
+            <h3>Подключите Instagram</h3>
+            <p>
+              В боте нажмите «Подключить Instagram» и войдите через официальный вход Instagram
+              (Instagram API with Instagram Login). Нужен профессиональный аккаунт (Business или
+              Creator). Пароль и токены вводить не нужно — доступ подтверждается на стороне Instagram.
+            </p>
+          </li>
+          <li class="step">
+            <span class="step-number">2</span>
+            <h3>Подключите Telegram Business</h3>
+            <p>
+              В настройках Telegram включите Telegram Business → «Чат-боты», добавьте
+              <strong>@repostorybot</strong> и разрешите ему право «Управление историями». Бот
+              подтвердит подключение сообщением.
+            </p>
+          </li>
+          <li class="step">
+            <span class="step-number">3</span>
+            <h3>Публикуйте как обычно</h3>
+            <p>
+              Как только в Instagram выходит новая история, Repostory замечает её и публикует в вашем
+              Telegram-профиле (вручную — с подтверждением, или автоматически, по вашей настройке), а
+              также в VK, если вы это включили.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Какие данные мы используем и зачем</h2>
+        <p>
+          Repostory запрашивает у Instagram только то, что нужно для переноса историй, и ничего
+          сверх этого. Полный перечень данных, сроки хранения и обработчики — в
+          <a href="/privacy.html">Политике конфиденциальности</a>.
+        </p>
+        <ul class="cards">
+          <li class="card">
+            <h3>Из Instagram</h3>
+            <p>
+              Id и username профессионального аккаунта, тип аккаунта, сами истории (фото/видео) и их
+              метаданные, токен доступа — только чтобы читать и публиковать ваши собственные истории.
+            </p>
+          </li>
+          <li class="card">
+            <h3>Из Telegram</h3>
+            <p>
+              Id и username вашего аккаунта, имя, id подключения Telegram Business — чтобы публиковать
+              истории от вашего имени.
+            </p>
+          </li>
+          <li class="card">
+            <h3>Из VK (по желанию)</h3>
+            <p>
+              Id пользователя и токен доступа VK — только если вы сами включили публикацию в VK.
+            </p>
+          </li>
+          <li class="card">
+            <h3>Медиафайлы</h3>
+            <p>
+              Файл истории скачивается на сервер только для публикации и удаляется сразу после неё
+              (или после того, как вы пропустили историю).
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section-muted">
+      <div class="container">
+        <h2>Удаление данных</h2>
+        <p>
+          Отключить Instagram и удалить свои данные можно в любой момент: кнопкой в боте, через
+          настройки Instagram или по e-mail. Подробности — на странице
+          <a href="/data-deletion.html">«Удаление данных»</a>.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://t.me/repostorybot">Открыть бота</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <ul class="footer-links">
+        <li><a href="/">Главная</a></li>
+        <li><a href="/privacy.html">Политика конфиденциальности</a></li>
+        <li><a href="/terms.html">Условия использования</a></li>
+        <li><a href="/data-deletion.html">Удаление данных</a></li>
+        <li><a href="mailto:islamov.tema@gmail.com">islamov.tema@gmail.com</a></li>
+      </ul>
+      <p class="footer-meta">ИП Исламов Артём · Repostory · <a href="https://t.me/repostorybot">@repostorybot</a></p>
+    </div>
+  </footer>
+</div>
+
+<!-- ===================== ENGLISH ===================== -->
+<div data-lang="en" hidden>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/">
+        <img class="brand-mark" src="/favicon.svg" alt="" width="34" height="34">
+        Repostory
+      </a>
+      <nav>
+        <ul class="site-nav">
+          <li><a href="/" class="current">Home</a></li>
+          <li><a href="/privacy.html">Privacy Policy</a></li>
+          <li><a href="/terms.html">Terms of Service</a></li>
+          <li><a href="/data-deletion.html">Data Deletion</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Your Instagram Stories, automatically mirrored to Telegram and VK</h1>
+        <p class="lead">
+          Repostory is a Telegram bot that, with your consent, watches the Stories on your own
+          professional Instagram account and re-publishes them to your Telegram profile — and, if you
+          choose, to your VK page. Keep posting on Instagram as usual; the bot does the rest.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://t.me/repostorybot">Open the bot</a>
+          <a class="btn btn-secondary" href="/privacy.html">Privacy Policy</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-muted">
+      <div class="container">
+        <h2>How it works</h2>
+        <ol class="steps">
+          <li class="step">
+            <span class="step-number">1</span>
+            <h3>Connect Instagram</h3>
+            <p>
+              In the bot, tap "Connect Instagram" and sign in with the official Instagram Login
+              (Instagram API with Instagram Login). You need a professional account (Business or
+              Creator). No passwords or tokens to type — access is granted on Instagram's side.
+            </p>
+          </li>
+          <li class="step">
+            <span class="step-number">2</span>
+            <h3>Connect Telegram Business</h3>
+            <p>
+              In Telegram settings, turn on Telegram Business → "Chatbots", add
+              <strong>@repostorybot</strong>, and grant it the "Manage stories" permission. The bot
+              confirms the connection with a message.
+            </p>
+          </li>
+          <li class="step">
+            <span class="step-number">3</span>
+            <h3>Post as usual</h3>
+            <p>
+              As soon as a new Story appears on Instagram, Repostory notices it and publishes it to
+              your Telegram profile (either with your confirmation, or automatically, depending on
+              your settings), and to VK too, if you turned that on.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>What data we use, and why</h2>
+        <p>
+          Repostory only requests from Instagram what it needs to mirror your Stories, nothing more.
+          The full list of data, retention periods and processors is in the
+          <a href="/privacy.html">Privacy Policy</a>.
+        </p>
+        <ul class="cards">
+          <li class="card">
+            <h3>From Instagram</h3>
+            <p>
+              Your professional account's id and username, account type, the Story media
+              (photo/video) and its metadata, and an access token — used only to read and re-publish
+              your own Stories.
+            </p>
+          </li>
+          <li class="card">
+            <h3>From Telegram</h3>
+            <p>
+              Your account id and username, first name, and Telegram Business connection id — used to
+              publish Stories on your behalf.
+            </p>
+          </li>
+          <li class="card">
+            <h3>From VK (optional)</h3>
+            <p>
+              Your VK user id and access token — only if you enabled publishing to VK yourself.
+            </p>
+          </li>
+          <li class="card">
+            <h3>Media files</h3>
+            <p>
+              A Story's media file is downloaded to the server only to publish it, and deleted right
+              after publishing (or after you skip that Story).
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section-muted">
+      <div class="container">
+        <h2>Deleting your data</h2>
+        <p>
+          You can disconnect Instagram and delete your data at any time: with a button in the bot,
+          through Instagram's own settings, or by email. Details are on the
+          <a href="/data-deletion.html">Data Deletion</a> page.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://t.me/repostorybot">Open the bot</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <ul class="footer-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/privacy.html">Privacy Policy</a></li>
+        <li><a href="/terms.html">Terms of Service</a></li>
+        <li><a href="/data-deletion.html">Data Deletion</a></li>
+        <li><a href="mailto:islamov.tema@gmail.com">islamov.tema@gmail.com</a></li>
+      </ul>
+      <p class="footer-meta">Artem Islamov, sole proprietor · Repostory · <a href="https://t.me/repostorybot">@repostorybot</a></p>
+    </div>
+  </footer>
+</div>
+
+<script src="/assets/lang.js"></script>
+</body>
+</html>
